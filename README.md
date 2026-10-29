@@ -6,8 +6,6 @@
 
 **Team Qualies:** Darren Lau · Richard Chen
 
-[📄 Report (4 pages)](submission/report.pdf) · [📘 Full technical write-up](docs/WRITEUP.md) · [💡 Plain-language explainer](submission/EXPLAINER.md) · [🎤 Talk script](submission/PRESENTATION_SCRIPT.md)
-
 ---
 
 ## Overview
@@ -46,7 +44,9 @@ the decomposition gap, which we report on every instance.
 
 **2. Match the hardware.** At the end of the pulse (Ω = 0) the device assigns each bitstring the energy
 
-$$E_\text{dev}(x) = -\delta_f \sum_i x_i + \sum_{i<j} \frac{C_6}{r_{ij}^6}\, x_i x_j .$$
+```math
+E_\text{dev}(x) = -\delta_f \sum_i x_i + \sum_{i<j} \frac{C_6}{r_{ij}^6}\, x_i x_j .
+```
 
 That is a QUBO with three built-in rules: **one shared linear coefficient**, **all couplings positive**, and couplings
 **never exactly zero**. Any model we run has to respect all three.
@@ -56,7 +56,9 @@ penalty gives a uniform linear term and positive intra-customer couplings. Unbal
 [[1]](#references) adds no auxiliary bits. Its linear part is constant on every one-hot string (the *one-hot
 identity*), so it can be dropped exactly, leaving a soft load-balance coupling:
 
-$$E(x) = \sum_k \sum_{i<j} w_{ij}\, x_{ik} x_{jk} + A \sum_i \Big(1 - \sum_k x_{ik}\Big)^2, \qquad w_{ij} = d_{ij} + 2\lambda_2 d_i d_j .$$
+```math
+E(x) = \sum_k \sum_{i<j} w_{ij}\, x_{ik} x_{jk} + A \sum_i \Big(1 - \sum_k x_{ik}\Big)^2, \qquad w_{ij} = d_{ij} + 2\lambda_2 d_i d_j .
+```
 
 **4. Embed: ask the register for less.** A generic embedding of the coupling graph has a relative coupling error of
 0.95. On valid strings, cross-vehicle couplings don't need to vanish, they only need to be *constant*. Our embedder
@@ -147,8 +149,6 @@ python -m cvrp.run --instance instances/S_seed00.json --formulation onehot-ub \
 python -m cvrp.validator instances/          # re-check every instance and its certificate
 python scripts/make.py test                  # test suite
 ```
-
-Every command is listed in [`docs/WRITEUP.md` §12](docs/WRITEUP.md#12-repository-map-and-how-to-reproduce-everything).
 
 ## Repository layout
 
