@@ -1,0 +1,632 @@
+{
+  "K": 4,
+  "N": 15,
+  "Q": 30,
+  "certificate": [
+    0,
+    3,
+    1,
+    1,
+    2,
+    0,
+    2,
+    1,
+    3,
+    0,
+    0,
+    1,
+    2,
+    2,
+    3
+  ],
+  "demands": [
+    3,
+    9,
+    6,
+    7,
+    8,
+    4,
+    1,
+    6,
+    1,
+    9,
+    6,
+    10,
+    2,
+    6,
+    7
+  ],
+  "depot": [
+    50.0,
+    50.0
+  ],
+  "depot_rule": "centre of the square (50, 50)",
+  "dmax_over_Q": 0.3333333333333333,
+  "extra": {},
+  "feasibility_method": "certificate-first: assignment drawn, then demands drawn within each vehicle's remaining capacity",
+  "generator": {
+    "attempts": 1,
+    "balanced_sizes": true,
+    "command": "python -m cvrp.instances --tiers L --seeds 1 --out instances/",
+    "coordinate_decimals": 2,
+    "demand_bias": 0.0,
+    "demand_range": [
+      1,
+      10
+    ],
+    "max_attempts": 1000,
+    "rho_min": 0.6,
+    "rng": "numpy.random.default_rng(seed)",
+    "seed": 1,
+    "version": "1.0"
+  },
+  "locations": [
+    [
+      51.18,
+      95.05
+    ],
+    [
+      14.42,
+      94.86
+    ],
+    [
+      31.18,
+      42.33
+    ],
+    [
+      82.77,
+      40.92
+    ],
+    [
+      54.96,
+      2.76
+    ],
+    [
+      75.35,
+      53.81
+    ],
+    [
+      32.97,
+      78.84
+    ],
+    [
+      30.32,
+      45.35
+    ],
+    [
+      13.4,
+      40.31
+    ],
+    [
+      20.35,
+      26.23
+    ],
+    [
+      75.04,
+      28.04
+    ],
+    [
+      48.52,
+      98.07
+    ],
+    [
+      96.17,
+      72.48
+    ],
+    [
+      54.12,
+      27.69
+    ],
+    [
+      16.07,
+      96.99
+    ]
+  ],
+  "name": "L_seed01",
+  "reference": {
+    "best_assignment": [
+      1,
+      1,
+      3,
+      2,
+      3,
+      2,
+      1,
+      3,
+      3,
+      3,
+      2,
+      1,
+      2,
+      2,
+      1
+    ],
+    "best_clusters": [
+      [
+        0,
+        1,
+        6,
+        11,
+        14
+      ],
+      [
+        3,
+        5,
+        10,
+        12,
+        13
+      ],
+      [
+        2,
+        4,
+        7,
+        8,
+        9
+      ]
+    ],
+    "cost": 434.9099839001027,
+    "found_by": "constrained-sa",
+    "method": "brief \u00a79.3 levels 2\u20133: qubo-solver simulated_annealing on the onehot-ub QUBO (max solve time 60 s) and constrained simulated annealing (10 restarts, 60 s total); C* = best known of the two",
+    "n_distinct_optima": 1,
+    "n_distinct_optima_note": "distinct best-known clusterings found by the two solvers (a lower bound)",
+    "n_vehicles_used": 3,
+    "qubosolver_best_assignment": [
+      2,
+      2,
+      0,
+      3,
+      0,
+      3,
+      2,
+      1,
+      0,
+      0,
+      3,
+      1,
+      1,
+      0,
+      2
+    ],
+    "qubosolver_candidates": [
+      {
+        "assignment": [
+          1,
+          2,
+          0,
+          3,
+          3,
+          0,
+          2,
+          0,
+          0,
+          2,
+          3,
+          1,
+          3,
+          0,
+          1
+        ],
+        "bits": "010000101000000100011000001010001000001000010100000110000100",
+        "cvrp_cost": 627.1309395511398,
+        "feasible": true,
+        "model_objective": 804.8502452808594,
+        "qubo_cost": -59184.109375
+      },
+      {
+        "assignment": [
+          3,
+          1,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          1,
+          0,
+          3,
+          1,
+          2,
+          3
+        ],
+        "bits": "000101000010100010001000001000100010010010000001010000100001",
+        "cvrp_cost": 665.2316372034386,
+        "feasible": true,
+        "model_objective": 811.1370368553653,
+        "qubo_cost": -59164.1640625
+      },
+      {
+        "assignment": [
+          1,
+          1,
+          3,
+          0,
+          2,
+          2,
+          1,
+          1,
+          3,
+          3,
+          2,
+          0,
+          0,
+          3,
+          1
+        ],
+        "bits": "010001000001100000100010010001000001000100101000100000010100",
+        "cvrp_cost": 573.3197129141813,
+        "feasible": true,
+        "model_objective": 766.0475211931248,
+        "qubo_cost": -59163.7109375
+      },
+      {
+        "assignment": [
+          1,
+          1,
+          3,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          0,
+          2,
+          0,
+          3,
+          2,
+          1
+        ],
+        "bits": "010001000001000100010010010000101000100000101000000100100100",
+        "cvrp_cost": 631.8553861795922,
+        "feasible": true,
+        "model_objective": 844.4482536071826,
+        "qubo_cost": -59158.17578125
+      },
+      {
+        "assignment": [
+          3,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          3,
+          1,
+          1,
+          3
+        ],
+        "bits": "000100100100100001001000001010000010001010000001010001000001",
+        "cvrp_cost": 633.7083048185673,
+        "feasible": true,
+        "model_objective": 847.0956374264972,
+        "qubo_cost": -59155.53125
+      },
+      {
+        "assignment": [
+          3,
+          3,
+          0,
+          1,
+          2,
+          1,
+          3,
+          0,
+          2,
+          2,
+          0,
+          3,
+          1,
+          1,
+          2
+        ],
+        "bits": "000100011000010000100100000110000010001010000001010001000010",
+        "cvrp_cost": 605.9922823747681,
+        "feasible": true,
+        "model_objective": 792.7581252235765,
+        "qubo_cost": -59150.6640625
+      },
+      {
+        "assignment": [
+          0,
+          1,
+          1,
+          3,
+          0,
+          3,
+          2,
+          2,
+          2,
+          2,
+          3,
+          0,
+          0,
+          3,
+          1
+        ],
+        "bits": "100001000100000110000001001000100010001000011000100000010100",
+        "cvrp_cost": 600.3894758617577,
+        "feasible": true,
+        "model_objective": 819.5098454672435,
+        "qubo_cost": -59142.12890625
+      },
+      {
+        "assignment": [
+          0,
+          2,
+          0,
+          3,
+          0,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          0,
+          2
+        ],
+        "bits": "100000101000000110000001001001000100010001000001000110000010",
+        "cvrp_cost": 632.0704890869745,
+        "feasible": true,
+        "model_objective": 836.543649317035,
+        "qubo_cost": -59125.08984375
+      },
+      {
+        "assignment": [
+          3,
+          0,
+          1,
+          0,
+          2,
+          0,
+          3,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          3,
+          2
+        ],
+        "bits": "000110000100100000101000000101000100010000100001100000010010",
+        "cvrp_cost": 687.4614920186064,
+        "feasible": true,
+        "model_objective": 889.2429523066128,
+        "qubo_cost": -59122.4921875
+      },
+      {
+        "assignment": [
+          0,
+          0,
+          3,
+          1,
+          3,
+          2,
+          3,
+          3,
+          3,
+          1,
+          1,
+          2,
+          2,
+          2,
+          0
+        ],
+        "bits": "100010000001010000010010000100010001010001000010001000101000",
+        "cvrp_cost": 659.5875688969207,
+        "feasible": true,
+        "model_objective": 890.6194856935215,
+        "qubo_cost": -59112.00390625
+      }
+    ],
+    "qubosolver_cost": 554.5623706594401,
+    "qubosolver_model_objective": 710.637946087082,
+    "qubosolver_n_candidates": 500,
+    "qubosolver_n_feasible_candidates": 500,
+    "reference_status": "best_known",
+    "route_lengths": [
+      0.0,
+      142.2550113044527,
+      146.51836741749116,
+      146.1366051781596
+    ],
+    "routes": [
+      [],
+      [
+        6,
+        1,
+        14,
+        11,
+        0
+      ],
+      [
+        13,
+        10,
+        3,
+        12,
+        5
+      ],
+      [
+        4,
+        9,
+        8,
+        7,
+        2
+      ]
+    ],
+    "sa_best_assignment": [
+      1,
+      1,
+      3,
+      2,
+      3,
+      2,
+      1,
+      3,
+      3,
+      3,
+      2,
+      1,
+      2,
+      2,
+      1
+    ],
+    "sa_cost": 434.9099839001027,
+    "sa_matches_optimum": true,
+    "sa_restarts_hitting_best": 10,
+    "sa_runs": [
+      {
+        "accepted": 247,
+        "cost": 434.9099839001037,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 0,
+        "time_s": 0.0687
+      },
+      {
+        "accepted": 259,
+        "cost": 434.9099839001027,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 1,
+        "time_s": 0.079
+      },
+      {
+        "accepted": 255,
+        "cost": 434.90998390010276,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 2,
+        "time_s": 0.0825
+      },
+      {
+        "accepted": 298,
+        "cost": 434.90998390010395,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 3,
+        "time_s": 0.0828
+      },
+      {
+        "accepted": 272,
+        "cost": 434.9099839001037,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 4,
+        "time_s": 0.0807
+      },
+      {
+        "accepted": 247,
+        "cost": 434.90998390010304,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 5,
+        "time_s": 0.0772
+      },
+      {
+        "accepted": 221,
+        "cost": 434.9099839001036,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 6,
+        "time_s": 0.0771
+      },
+      {
+        "accepted": 235,
+        "cost": 434.9099839001034,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 7,
+        "time_s": 0.1014
+      },
+      {
+        "accepted": 226,
+        "cost": 434.9099839001028,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 8,
+        "time_s": 0.0965
+      },
+      {
+        "accepted": 167,
+        "cost": 434.90998390010304,
+        "final_temp": 0.009969,
+        "iterations": 22755,
+        "seed": 9,
+        "time_s": 0.0785
+      }
+    ],
+    "solver_settings": {
+      "cplex": "not available (package `cplex` not importable)",
+      "qubo_solver": {
+        "algorithm": "simulated_annealing (cplex not importable)",
+        "convention_check": {
+          "max_abs_diff": 0.015800687804585323,
+          "n_checked": 34,
+          "qs_float_dtype": "torch.float32",
+          "tol": 10.868840619077288
+        },
+        "max_iter": 2000000,
+        "note": "qubosolver.solving.simulated_annealing.solve, vectorized batch of 10 starts from torch.Generator(0); one time budget for the batch",
+        "package": "qubo-solver",
+        "qubo": "onehot-ub penalized QUBO, 60 variables, weights {\"lam2\": 2.2770634896522277, \"A\": 4184.46554413282}",
+        "restarts": 10,
+        "sa_alpha": "geometric, (Tf/T0)^(1/max_iter), set by qubo-solver",
+        "sa_final_temp": 4.18446554413282,
+        "sa_initial_temp": 4184.46554413282,
+        "sa_time_limit_s": 60.0,
+        "seed_info": {
+          "seed": 0,
+          "seeder": "qubosolver.utils._random.manual_seed"
+        },
+        "seeds": [
+          0
+        ],
+        "time_limit_s": 60.0,
+        "version": "0.9.1"
+      },
+      "sa": {
+        "max_iter": 50000,
+        "moves": "reassign one customer (p=0.5) or swap two customers of different vehicles (p=0.5); moves that overload a vehicle are rejected",
+        "moves_per_temp": 15,
+        "restarts": 10,
+        "rng": "numpy.random.default_rng(seed)",
+        "sa_alpha": 0.995,
+        "sa_final_temp": 0.01,
+        "sa_initial_temp": 20.0,
+        "sa_time_limit": 6.0,
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "start": "the feasibility certificate, perturbed by N random feasible moves"
+      }
+    },
+    "timing_s": {
+      "qubo_solver": 67.47,
+      "sa_total": 0.8758
+    }
+  },
+  "rho": 0.7083333333333334,
+  "seed": 1,
+  "square_side": 100.0,
+  "tier": "L"
+}
