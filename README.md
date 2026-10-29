@@ -45,7 +45,7 @@ the decomposition gap, which we report on every instance.
 **2. Match the hardware.** At the end of the pulse (Ω = 0) the device assigns each bitstring the energy
 
 ```math
-E_\text{dev}(x) = -\delta_f \sum_i x_i + \sum_{i<j} \frac{C_6}{r_{ij}^6}\, x_i x_j .
+E_\text{dev}(x) = -\delta_f \sum_i x_i + \sum_{i \lt j} \frac{C_6}{r_{ij}^6}\, x_i x_j .
 ```
 
 That is a QUBO with three built-in rules: **one shared linear coefficient**, **all couplings positive**, and couplings
@@ -57,7 +57,7 @@ penalty gives a uniform linear term and positive intra-customer couplings. Unbal
 identity*), so it can be dropped exactly, leaving a soft load-balance coupling:
 
 ```math
-E(x) = \sum_k \sum_{i<j} w_{ij}\, x_{ik} x_{jk} + A \sum_i \Big(1 - \sum_k x_{ik}\Big)^2, \qquad w_{ij} = d_{ij} + 2\lambda_2 d_i d_j .
+E(x) = \sum_k \sum_{i \lt j} w_{ij}\, x_{ik} x_{jk} + A \sum_i \Big(1 - \sum_k x_{ik}\Big)^2, \qquad w_{ij} = d_{ij} + 2\lambda_2 d_i d_j .
 ```
 
 **4. Embed: ask the register for less.** A generic embedding of the coupling graph has a relative coupling error of
